@@ -3,79 +3,157 @@
 // BANKIST APP
 
 // Data;
-const account1 = {
-  owner: 'Muhammad Anees',
-  movements: [200, 450, -400, 3000, 5000, -650, -130, 70, 7000, 1300, 5000],
-  interestRate: 1.2, // %
-  pin: 1111,
-  movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2020-04-10T14:43:26.374Z',
-    '2020-06-25T18:49:59.371Z',
-    '2020-07-26T12:01:20.894Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
-    '2020-06-25T18:49:59.371Z',
-    '2020-07-26T12:01:20.894Z',
-  ],
-};
 
-const account2 = {
-  owner: 'Sherioz',
-  movements: [5000, 3400, -150, -790, 8000, -3210, -1000, 8500, -30],
-  interestRate: 1.5,
-  pin: 2222,
-  movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
-    '2020-06-25T18:49:59.371Z',
-    '2020-06-25T18:49:59.371Z',
-    '2024-07-26T12:01:20.894Z',
-  ],
-};
-
-const account3 = {
-  owner: 'Ghufran Ullah',
-  movements: [200, -200, 340, -300, 2000, -20, 50, 400, -460, 3000],
-  interestRate: 0.7,
-  pin: 3333,
-  movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
-    '2020-06-25T18:49:59.371Z',
-    '2020-07-26T12:01:20.894Z',
-  ],
-};
-
-const account4 = {
-  owner: 'Khawja Saadullah Sajjad',
-  movements: [430, 1000, 700, 50, 90, 3000],
-  interestRate: 1,
-  pin: 4444,
-  movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
-  ],
-};
-
-const accounts = [account1, account2, account3, account4];
+const accounts = [
+  {
+    owner: 'Muhammad Anees',
+    interestRate: 0.7,
+    pin: 1111,
+    movements: [
+      {
+        id: '1',
+        amount: 200,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '2',
+        amount: 5000,
+        date: '2024-1-01T13:15:33.035Z',
+      },
+      {
+        id: '3',
+        amount: -200,
+        date: '2023-11-01T13:15:33.035Z',
+      },
+      {
+        id: '4',
+        amount: 6000,
+        date: '2022-10-01T13:15:33.035Z',
+      },
+      {
+        id: '5',
+        amount: -50,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '6',
+        amount: 10000,
+        date: '2018-11-01T13:15:33.035Z',
+      },
+    ],
+  },
+  {
+    owner: 'Sheroz',
+    interestRate: 0.7,
+    pin: 2222,
+    movements: [
+      {
+        id: '1',
+        amount: 20,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '2',
+        amount: 6000,
+        date: '2024-01-01T13:15:33.035Z',
+      },
+      {
+        id: '3',
+        amount: -20,
+        date: '2023-11-01T13:15:33.035Z',
+      },
+      {
+        id: '4',
+        amount: 30,
+        date: '2022-10-01T13:15:33.035Z',
+      },
+      {
+        id: '5',
+        amount: -50,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '6',
+        amount: 10000,
+        date: '2018-11-01T13:15:33.035Z',
+      },
+    ],
+  },
+  {
+    owner: 'Khawaja Saadullah Sajjad ',
+    interestRate: 0.7,
+    pin: 4444,
+    movements: [
+      {
+        id: '1',
+        amount: 2000,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '2',
+        amount: 500,
+        date: '2024-01-01T13:15:33.035Z',
+      },
+      {
+        id: '3',
+        amount: -200,
+        date: '2023-11-01T13:15:33.035Z',
+      },
+      {
+        id: '4',
+        amount: 300,
+        date: '2022-10-01T13:15:33.035Z',
+      },
+      {
+        id: '5',
+        amount: -50,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '6',
+        amount: 100,
+        date: '2018-11-01T13:15:33.035Z',
+      },
+    ],
+  },
+  {
+    owner: 'Ghufran Ullah',
+    interestRate: 0.7,
+    pin: 3333,
+    movements: [
+      {
+        id: '1',
+        amount: 200,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '2',
+        amount: 5000,
+        date: '2024-1-01T13:15:33.035Z',
+      },
+      {
+        id: '3',
+        amount: -200,
+        date: '2023-11-01T13:15:33.035Z',
+      },
+      {
+        id: '4',
+        amount: 300,
+        date: '2022-10-01T13:15:33.035Z',
+      },
+      {
+        id: '5',
+        amount: -50,
+        date: '2024-11-01T13:15:33.035Z',
+      },
+      {
+        id: '6',
+        amount: 1000,
+        date: '2018-11-01T13:15:33.035Z',
+      },
+    ],
+  },
+];
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -85,6 +163,8 @@ const labelSumIn = document.querySelector('.summary__value--in');
 const labelSumOut = document.querySelector('.summary__value--out');
 const labelSumInterest = document.querySelector('.summary__value--interest');
 const labelTimer = document.querySelector('.timer');
+const model = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
 
 const containerApp = document.querySelector('.app');
 const containerMovements = document.querySelector('.movements');
@@ -94,6 +174,7 @@ const btnTransfer = document.querySelector('.form__btn--transfer');
 const btnLoan = document.querySelector('.form__btn--loan');
 const btnClose = document.querySelector('.form__btn--close');
 const btnSort = document.querySelector('.btn--sort');
+const btnfloat = document.querySelector('.btn--float');
 
 const inputLoginUsername = document.querySelector('.login__input--user');
 const inputLoginPin = document.querySelector('.login__input--pin');
@@ -118,31 +199,38 @@ const datestring = function (dat) {
 //display movements
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
+  let arrr = [];
 
   const movs = sort
-    ? acc.movements.slice().sort((a, b) => a - b)
+    ? acc.movements.slice().sort((a, b) => a.amount - b.amount)
     : acc.movements;
+
+  // movs.forEach(function (mov, i) {
+  //   arrr.push(mov.movements.indexOf(movs[i]));
+  // });
   movs.forEach(function (mov, i) {
-    console.log(i);
     // const date = new Date();
-    const date = datestring(acc.movementsDates[i]);
-    type = mov > 0 ? 'deposit' : 'withdrawal';
+    const date = datestring(mov.date);
+    type = mov.amount > 0 ? 'deposit' : 'withdrawal';
     const html = ` <div class="movements__row">
           <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
           <div class="movements__date">${date}</div>
-          <div class="movements__value">${mov}€</div>
+          <div class="movements__value">${mov.amount}€</div>
         </div>
         `;
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
+  console.log(arrr);
 };
 
-//displaybalance
-
 const calBalance = function (acc) {
-  acc.balance = acc.movements.reduce((acc, cur) => acc + cur, 0);
+  // console.log(acc.movements[amount]);
+  acc.balance = acc.movements.reduce((acc, cur) => {
+    const am = cur.amount;
+    return acc + am;
+  }, 0);
   labelBalance.textContent = `${acc.balance}€`;
 };
 
@@ -151,17 +239,23 @@ const calBalance = function (acc) {
 const displaySummary = function (acc) {
   //deposit
   const deposit = acc.movements
-    .filter(mov => mov > 0)
-    .reduce((acc, cur) => acc + cur, 0);
+    .filter(mov => mov.amount > 0)
+    .reduce((acc, cur) => {
+      const am = cur.amount;
+      return acc + am;
+    }, 0);
   //widrawal
   const widraw = acc.movements
-    .filter(mov => mov < 0)
-    .reduce((acc, cur) => acc + cur, 0);
+    .filter(mov => mov.amount < 0)
+    .reduce((acc, cur) => {
+      const am = cur.amount;
+      return acc + am;
+    }, 0);
   //interest
   const interest = acc.movements
-    .filter(mov => mov > 0)
-    .map(dep => (dep * acc.interestRate) / 100)
-    .filter((mov, i, arr) => mov >= 1)
+    .filter(mov => mov.amount > 0)
+    .map(dep => (dep.amount * acc.interestRate) / 100)
+    .filter(mov => mov >= 1)
     .reduce((acc, cur) => acc + cur, 0);
   //change in html
   labelSumIn.textContent = `${deposit}€`;
@@ -223,7 +317,7 @@ let currentaccount, timer;
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
   currentaccount = accounts.find(
-    acc => acc.username === inputLoginUsername.value
+    acc => acc.username.toLowerCase() === inputLoginUsername.value.toLowerCase()
   );
   if (currentaccount?.pin === Number(inputLoginPin.value)) {
     inputLoginUsername.value = '';
@@ -233,6 +327,9 @@ btnLogin.addEventListener('click', function (e) {
     uiChange(currentaccount);
     if (timer) clearInterval(timer);
     timer = starttimer();
+  } else {
+    model.classList.remove('hidden');
+    overlay.classList.remove('hidden');
   }
 });
 //btn transfer
@@ -240,25 +337,36 @@ btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = inputTransferAmount.value;
   const transferaccount = accounts.find(
-    acc => acc.username === inputTransferTo.value
+    acc => acc.username.toLowerCase() === inputTransferTo.value.toLowerCase()
   );
   if (
     amount > 0 &&
     currentaccount.balance > amount &&
     transferaccount &&
-    transferaccount.username !== currentaccount.username
+    transferaccount.username.toLowerCase() !==
+      currentaccount.username.toLowerCase()
   ) {
     inputTransferAmount.value = '';
     inputTransferTo.value = '';
     inputTransferTo.blur();
     //money
 
-    currentaccount.movements.push(Number(-amount));
-    transferaccount.movements.push(Number(amount));
+    // currentaccount.movements.push(Number(-amount));
+    // transferaccount.movements.push(Number(amount));
+    currentaccount.movements.push({
+      id: '',
+      amount: Number(-amount),
+      date: new Date().toISOString(),
+    });
+    transferaccount.movements.push({
+      id: '',
+      amount: Number(amount),
+      date: new Date().toISOString(),
+    });
     //date
 
-    currentaccount.movementsDates.push(new Date().toISOString());
-    transferaccount.movementsDates.push(new Date().toISOString());
+    // currentaccount.movementsDates.push(new Date().toISOString());
+    // transferaccount.movementsDates.push(new Date().toISOString());
     uiChange(currentaccount);
     clearInterval(timer);
     timer = starttimer();
@@ -269,14 +377,20 @@ btnTransfer.addEventListener('click', function (e) {
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = inputLoanAmount.value;
-  if (amount > 0 && currentaccount.movements.some(mov => mov >= amount * 0.1)) {
-    currentaccount.movements.push(Number(amount));
-    console.log(new Date().toISOString());
-    currentaccount.movementsDates.push(new Date().toISOString());
-    console.log(currentaccount);
+  if (
+    amount > 0 &&
+    currentaccount.movements.some(mov => mov.amount >= amount * 0.1)
+  ) {
+    currentaccount.movements.push({
+      id: '',
+      amount: Number(amount),
+      date: new Date().toISOString(),
+    });
     uiChange(currentaccount);
     clearInterval(timer);
     timer = starttimer();
+    inputLoanAmount.value = '';
+    inputLoanAmount.blur();
   }
 });
 
@@ -284,7 +398,10 @@ btnClose.addEventListener('click', function (e) {
   e.preventDefault();
   const pin = Number(inputClosePin.value);
   const username = inputCloseUsername.value;
-  if (username === currentaccount.username && pin === currentaccount.pin) {
+  if (
+    username.toLowerCase() === currentaccount.username.toLowerCase() &&
+    pin === currentaccount.pin
+  ) {
     const account = accounts.findIndex(acc => acc.username === username);
     accounts.splice(account, 1);
     containerApp.style.opacity = 0;
@@ -297,4 +414,14 @@ btnSort.addEventListener('click', function (e) {
   e.preventDefault();
   displayMovements(currentaccount, !sorted);
   sorted = !sorted;
+});
+
+btnfloat.addEventListener('click', function (e) {
+  e.preventDefault();
+  model.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+overlay.addEventListener('click', function () {
+  model.classList.add('hidden');
+  overlay.classList.add('hidden');
 });
